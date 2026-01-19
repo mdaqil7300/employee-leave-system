@@ -4,13 +4,10 @@ import { Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
 import Login from './pages/auth/Login'
 import AdminDashboard from './pages/admin/AdminDashboard'
-import Employees from './pages/admin/Employees'
 import AllLeaves from './pages/admin/AllLeaves'
 import EmpDashboard from './pages/employee/EmpDashboard'
 import ApplyLeave from './pages/employee/ApplyLeave'
 import MangerDashboard from './pages/manager/MangerDashboard'
-import LeaveApprovals from './pages/manager/LeaveApprovals'
-import TeamLeaves from './pages/manager/TeamLeaves'
 import ProtectedRoute from './pages/auth/ProtectedRoute'
 
 function App() {
@@ -32,14 +29,6 @@ function App() {
               element={
                 <ProtectedRoute user={user} allowedRoles={'Admin Department Employee'}>
                   <AdminDashboard />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/employees"
-              element={
-                <ProtectedRoute user={user} allowedRoles={'Admin Department Employee'}>
-                  <Employees />
                 </ProtectedRoute>
               }
             />
@@ -76,22 +65,6 @@ function App() {
               element={
                 <ProtectedRoute user={user} allowedRoles={'Department Head'}>
                   <MangerDashboard />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/leaveApprovals"
-              element={
-                <ProtectedRoute user={user} allowedRoles={'Department Head'}>
-                  <LeaveApprovals />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/teamLeaves"
-              element={
-                <ProtectedRoute user={user} allowedRoles={'Department Head'}>
-                  <TeamLeaves />
                 </ProtectedRoute>
               }
             />

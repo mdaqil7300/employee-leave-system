@@ -29,12 +29,6 @@ const Sidebar = ({ user }) => {
                             <li className="nav-item">
                                 <Link className="nav-link" to='/managerDashboard'>Dashboard</Link>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to='/leaveApprovals'>Leave Approvals</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to='/teamLeaves'>Team Leaves</Link>
-                            </li>
                         </ul>
                     }
                     {
@@ -42,9 +36,6 @@ const Sidebar = ({ user }) => {
                         <ul className="navbar-nav">
                             <li className="nav-item">
                                 <Link className="nav-link" to='/adminDashboard'>Dashboard</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to='/employees'>All Employees</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to='/allLeaves'>All Leaves</Link>
